@@ -1,0 +1,77 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  background: #dadada;
+}
+.main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.tela{
+  width: 320px;
+  height: 600px;
+  background-color: #191414;
+  overflow: hidden;
+  position: relative;
+  border-radius: 17px;
+  box-shadow:  -14px -14px 43px #a4a4a4,
+             14px 14px 43px #ffffff;
+}
+.overlayer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.23012955182072825) 100%);
+}
+.bg{
+  background-image: url(https://www.porto87fm.com.br/wp-content/uploads/2023/05/matue-fotorenanpinheiro.png);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.div-seta-baixo svg{
+  width: 25px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+.div-seta-baixo svg path{
+  fill: white;
+}
+.div-play-list-atual{
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  cursor: default;
+}
+.div-play-list-atual span{
+  display: block;
+  font-weight: bold;
+  margin-top: 3px;
+}
+.div-op-musica-atual svg{
+  width: 20px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+.div-op-musica-atual svg path{
+  fill: white;
+}
