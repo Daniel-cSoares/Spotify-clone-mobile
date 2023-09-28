@@ -22,39 +22,52 @@ function active(id){
         icone.style.color = 'rgb(255, 255, 255)'
     }
 }
-function trocarImg(){
-    let cont = 0
-    let jpeg = true
-    let bg = document.getElementById("bg")
-    let style = window.getComputedStyle(bg)
-    let imgAtual = style.getPropertyValue("background-image")
-    let indiceImg = imgAtual.indexOf(".jpeg")
-    console.log(imgAtual);
-
-    if (indiceImg == -1){
-        indiceImg = imgAtual.indexOf(".jpg")
-        jpeg = false
+function extensaoDetect(url){
+    let jpeg = url.indexOf(".jpeg")
+    let jpg = url.indexOf(".jpg")
+    let png = url.indexOf(".png")
+    if (jpeg != -1){
+        return ".jpeg"
     }
-
-    if (imgAtual[indiceImg-1] > 3){
-        cont = 1
+    else if (jpg != -1){
+        return ".jpg"
     }
-    else if (imgAtual[indiceImg-1] < 1){
-        cont = 3
+    else if (png != -1){
+        return ".png"
     }
     else{
-        cont += 1
+        return "u"
     }
-
-    if (jpeg == true){
-        bg.style.backgroundImage = "url(./img/"+cont+".jpeg);"
-        console.log("Mudado para: ", "url(./img/"+cont+".jpeg);");
+}
+function nextImg(){
+    let bg = document.getElementById("bg");
+    let style = window.getComputedStyle(bg);
+    let urlImgAtual = style.getPropertyValue("background-image");
+    let indiceImg = urlImgAtual.indexOf(extensaoDetect(urlImgAtual));
+    let imgAtual = urlImgAtual[indiceImg-1];
+    let imgAtualInt = parseInt(imgAtual);
+    console.log(urlImgAtual);
+    if (imgAtualInt == 4){
+        imgAtualInt = 1;
     }
     else{
-        bg.style.backgroundImage = "url(./img/"+cont+".jpg);"
-        console.log("Mudado para: ", "url(./img/"+cont+".jpg);");
+        imgAtualInt++;
     }
-    console.log("indexOF: ", indiceImg);
-    console.log("Imagem", imgAtual[indiceImg-1]);
-    
+    bg.setAttribute("class", "bg"+imgAtualInt.toString()+" "+"bg")
+}
+function backImg(){
+    let bg = document.getElementById("bg");
+    let style = window.getComputedStyle(bg);
+    let urlImgAtual = style.getPropertyValue("background-image");
+    let indiceImg = urlImgAtual.indexOf(extensaoDetect(urlImgAtual));
+    let imgAtual = urlImgAtual[indiceImg-1];
+    let imgAtualInt = parseInt(imgAtual);
+    console.log(urlImgAtual);
+    if (imgAtualInt == 1){
+        imgAtualInt = 4;
+    }
+    else{
+        imgAtualInt--;
+    }
+    bg.setAttribute("class", "bg"+imgAtualInt.toString()+" "+"bg")
 }

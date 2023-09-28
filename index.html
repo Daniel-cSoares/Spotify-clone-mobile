@@ -7,6 +7,9 @@
   </head>
 
   <body>
+    <div class="credito">
+      <a href="https://daniel-csoares.github.io/hub-links/" target="_black">By Daniel Soares</a>
+    </div>
     <div class="main">
       <div class="tela">
         <div class="frame">
@@ -38,11 +41,11 @@
           <div class="infos">
             <div class="container-infos">
               <div class="nome-artista">
-                Conexões de Máfia
-                <span>Matuê, Rich The Kid</span>
+                Unknown Music
+                <span>Unknown Artist</span>
               </div>
               <div class="favorito">
-                <ion-icon onclick='active("heart")' id="heart" class="select" name="heart"></ion-icon>
+                <ion-icon onclick='active("heart")' id="heart" class="" name="heart"></ion-icon>
               </div>
             </div>
             <div class="bar">
@@ -51,16 +54,16 @@
             <div class="controls">
               <ion-icon onclick='active("shuffle")' id="shuffle" name="shuffle"></ion-icon>
               <div class="controls-central">
-                <ion-icon  id="skip-back" name="play-skip-back"></ion-icon>
-                <ion-icon onclick="play(), trocarImg()" id="play" name="play-circle"></ion-icon>
-                <ion-icon id="skip-forward" name="play-skip-forward"></ion-icon>
+                <ion-icon onclick="backImg()" id="skip-back" name="play-skip-back"></ion-icon>
+                <ion-icon onclick="play()" id="play" name="play-circle"></ion-icon>
+                <ion-icon onclick="nextImg()" id="skip-forward" name="play-skip-forward"></ion-icon>
               </div>
               <ion-icon onclick='active("repeat")' id="repeat" name="repeat"></ion-icon>
             </div>
           </div>
         </div>
         <div class="overlayer"></div>
-        <div id="bg" class="bg"></div>
+        <div id="bg" class="bg1 bg"></div>
         <div class="box-fundo"></div>
       </div>
     </div>
