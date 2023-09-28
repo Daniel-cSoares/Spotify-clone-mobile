@@ -12,6 +12,8 @@ body{
 }
 .credito{
   position: absolute;
+  top: 0;
+  left: 0;
   padding: 20px;
   background-color: #1DB954;
   border-radius: 0 0 17px 0;
@@ -35,13 +37,6 @@ body{
 .select{
   color: #1DB954;
 }
-.main{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
 .frame{
   position: absolute;
 }
@@ -62,6 +57,7 @@ body{
   position: relative;
   border-radius: 17px;
   box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 30px auto;
 }
 .overlayer{
   position: absolute;
