@@ -6,13 +6,32 @@
   font-family: sans-serif;
 }
 body{
-  background: #dadada;
+  background: #d4d9d5;
+  color: white;
+  cursor: default;
+}
+.box-fundo{
+  width: 320px;
+  height: 600px;
+  background-color: #1DB954;
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  border-radius: 17px;
+  z-index: -1;
+}
+.select{
+  color: #1DB954;
 }
 .main{
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.frame{
+  position: absolute;
 }
 .top{
   display: flex;
@@ -28,11 +47,9 @@ body{
   width: 320px;
   height: 600px;
   background-color: #191414;
-  overflow: hidden;
   position: relative;
   border-radius: 17px;
-  box-shadow:  -14px -14px 43px #a4a4a4,
-             14px 14px 43px #ffffff;
+  box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.5);
 }
 .overlayer{
   position: absolute;
@@ -41,7 +58,7 @@ body{
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.23012955182072825) 100%);
 }
 .bg{
-  background-image: url(https://www.porto87fm.com.br/wp-content/uploads/2023/05/matue-fotorenanpinheiro.png);
+  background-image: url(./img/3.jpg);
   width: 100%;
   height: 100%;
   background-position: center;
@@ -58,7 +75,6 @@ body{
 }
 .div-play-list-atual{
   text-align: center;
-  color: white;
   font-size: 10px;
   cursor: default;
 }
@@ -74,4 +90,114 @@ body{
 }
 .div-op-musica-atual svg path{
   fill: white;
+}
+
+.infos{
+  height: 550px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  z-index: 1;
+  
+}
+.container-infos{
+  padding: 16px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nome-artista{
+  font-size: 18px;
+  font-weight: 700;
+}
+.nome-artista span{
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #a4a4a4;
+  margin-top: 3px;
+}
+.favorito ion-icon{
+  font-size: 30px;
+  cursor: pointer;
+  outline: 5px solid rgba(255, 255, 255, 0.0);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.0);
+  transition: 300ms;
+}
+.favorito ion-icon:hover{
+  outline: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.bar{
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.bar input{
+  width: 100%;
+  height: 3px;
+  accent-color: #ffffff;
+  outline: none;
+  border: none;
+  transition: accent-color 100ms;
+}
+.bar input:hover{
+  accent-color: #1DB954;
+}
+.controls{
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+}
+.controls-central{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+}
+#shuffle{
+  font-size: 23px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+}
+#shuffle:hover{
+  color: white;
+}
+#skip-back{
+  font-size: 28px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+}
+#skip-back:hover{
+  color: white;
+}
+#play{
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+}
+#play:hover{
+  color: white;
+}
+#skip-forward{
+  font-size: 28px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+}
+#skip-forward:hover{
+  color: white;
+}
+#repeat{
+  font-size: 23px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+}
+#repeat:hover{
+  color: white;
 }
