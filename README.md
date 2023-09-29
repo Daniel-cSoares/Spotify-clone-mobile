@@ -19,6 +19,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Um desafio pessoal de desenvolver a interface mobile do player de músicas do Spotify, Com o intuito de aprender um pouco mais sobre HTML, CSS e JS. <a href="https://daniel-csoares.github.io/Spotify-clone-mobile/">Você pode acessar aqui</a>
+Um desafio pessoal de desenvolver a interface mobile do player de músicas do Spotify, Com o intuito de aprender um pouco mais sobre HTML, CSS e JS. <a href="https://daniel-csoares.github.io/Spotify-clone-mobile/" target="_blank">Você pode acessar aqui</a>
 
 ---
